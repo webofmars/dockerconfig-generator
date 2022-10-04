@@ -3,7 +3,7 @@
 import argparse
 import base64
 
-parser = argparse.ArgumentParser(description='process cli arguments')
+parser = argparse.ArgumentParser(description='generates a docker config.json file or it\'s base64 encoded version')
 
 parser.add_argument('-r', '--registry', dest='registry', default='index.docker.io', help='registry to use')
 parser.add_argument('-u', '--username', dest='username', default='foo', help='username to use')
