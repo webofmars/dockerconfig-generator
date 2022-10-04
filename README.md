@@ -16,7 +16,7 @@ pip install -r requirements.txt
 python ./generator.py --registry index.docker.io --username foo --password bar --base64
 ```
 
-## or with dockerconfig
+## or with docker
 
 ```sh
 docker run --rm -it webofmars/dockerconfig-generator:latest --registry index.docker.io --username foo --password bar --base64
