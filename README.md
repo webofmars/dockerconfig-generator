@@ -16,8 +16,15 @@ pip install -r requirements.txt
 python ./generator.py --registry index.docker.io --username foo --password bar --base64
 ```
 
-## or with docker
+## or with dockerconfig
 
 ```sh
 docker run --rm -it webofmars/dockerconfig-generator:latest --registry index.docker.io --username foo --password bar --base64
+```
+
+## use it with kubernetes
+
+```sh
+docker run --rm -it webofmars/dockerconfig-generator:latest --registry index.docker.io --username foo --password bar \
+  | kubectl create secret generic toto -o yaml --dry-run=client --from-file .dockerconfigjson=/dev/stdin
 ```
