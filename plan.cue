@@ -22,6 +22,7 @@ dagger.#Plan & {
   actions: {
       build: docker.#Dockerfile & {
           source: client.filesystem.".".read.contents
+          platforms: ["linux/amd64", "linux/arm64"]
       }
 
       push: docker.#Push & {
